@@ -21,7 +21,7 @@
 
     
     //$result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala WHERE IDSala = '%s'",$idsala));
-    $result = mysqli_query ($link, sprintf ( "SELECT * FROM Mensajesindividuales INNER JOIN usuario ON Mensajesindividuales.IDUsuarioEmisor = Usuario.IDUsuario WHERE IDUsuarioEmisor = '%s' and IDUsuarioReceptor = '%s' or IDUsuarioEmisor = '%s' and IDUsuarioReceptor = '%s' ORDER BY IDMensajesIndividuales ASC",$idemisor, $idreceptor, $idreceptor, $idemisor));
+    $result = mysqli_query ($link, sprintf ( "SELECT * FROM mensajesindividuales INNER JOIN usuario ON mensajesindividuales.IDusuarioEmisor = usuario.IDUsuario WHERE IDusuarioEmisor = '%s' and IDUsuarioReceptor = '%s' or IDUsuarioEmisor = '%s' and IDUsuarioReceptor = '%s' ORDER BY IDMensajesIndividuales ASC",$idemisor, $idreceptor, $idreceptor, $idemisor));
 
     $mensajes=array();
 
