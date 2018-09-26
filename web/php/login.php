@@ -15,9 +15,9 @@ if(isset($_POST['login']))
     //echo '<script>alert("'.$clave.'")</script>';
 
 
+    //$result = mysqli_query ( $link, sprintf ("SELECT IDUsuario, NombreUsuario FROM Usuario WHERE EmailUsuario = '%s' AND ClaveUsuario = '%s'", $email,$clave));
     $result = mysqli_query ( $link, sprintf ("SELECT IDUsuario, NombreUsuario FROM Usuario WHERE EmailUsuario = '%s' AND ClaveUsuario = '%s'", $email,$clave));
 
-    var_dump($result);
     if (mysqli_num_rows($result) != 0) 
     {
         $row = mysqli_fetch_array($result);

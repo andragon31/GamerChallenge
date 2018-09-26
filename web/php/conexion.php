@@ -6,4 +6,8 @@
         printf("conexion fallida", mysqli_connect_error());
         exit();
     }
+    else
+    {
+        printf("conexion exitosa");
+    }
 ?>
