@@ -16,8 +16,8 @@
     //date("d-m-Y (H:i:s)", $time);
     //var_dump(date("d-m-Y (H:i:s)", $time));
     
-    $idemisor = 1;//$_SESSION['IDUsuario'];
-    $idreceptor = 2;//$_SESSION['IDPrivado'];
+    $idemisor = $_SESSION['IDUsuario'];
+    $idreceptor = $_SESSION['IDPrivado'];
 
     
     //$result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala WHERE IDSala = '%s'",$idsala));

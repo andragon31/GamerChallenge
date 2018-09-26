@@ -1,4 +1,4 @@
-var urlmensajes = 'https://localhost/GCCHAT/php/mensajesprivados.php';
+var urlmensajes = 'https://gamerchallenge.herokuapp.com/php/mensajesprivados.php';
 new Vue({
     el: '#privados',
     created: function() {

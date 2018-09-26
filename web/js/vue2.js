@@ -1,4 +1,4 @@
-var urlmensajes = 'https://localhost/GCCHAT/php/mensajes2.php';
+var urlmensajes = 'https://gamerchallenge.herokuapp.com/php/mensajes2.php';
 new Vue({
     el: '#main',
     created: function() {
