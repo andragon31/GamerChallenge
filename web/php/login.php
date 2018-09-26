@@ -11,13 +11,13 @@ if(isset($_POST['login']))
     $email = mysqli_real_escape_string ( $link, $_POST ['emaillg'] );
 	$clave = mysqli_real_escape_string ( $link, $_POST ['clavelg'] );
     
-    echo '<script>alert("'.$email.'")</script>';
-    echo '<script>alert("'.$clave.'")</script>';
+    //echo '<script>alert("'.$email.'")</script>';
+    //echo '<script>alert("'.$clave.'")</script>';
 
 
     $result = mysqli_query ( $link, sprintf ("SELECT IDUsuario, NombreUsuario FROM Usuario WHERE EmailUsuario = '%s' AND ClaveUsuario = '%s'", $email,$clave));
 
-
+    var_dump($result);
     if (mysqli_num_rows($result) != 0) 
     {
         $row = mysqli_fetch_array($result);
