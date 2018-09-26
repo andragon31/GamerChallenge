@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>VUEjs V2 AJAX vue-resource | Rimorsoft Online</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <br><br>
+    <h1 class="text-center">CHAT CON VUE</h1>
+	<div id="usuarios" class="container text-center">
+            <div class="table-wrapper-scroll-y">
+                <div>{{usuarios}}</div>
+                    <table class="table table-bordered table-striped col-md-3">
+                      <thead>
+                        <tr>
+                          <th scope="col">First</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="usuario in usuarios">
+                          <td>
+                            <button type="button" class="btn btn-secondary">{{usuario.NombreUsuario}}</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+                  </div>
+	</div>
+    
+    <!--LIBRERIAS JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/vue-resource.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/vueusuarios.js"></script>		
+</body>
+</html>
