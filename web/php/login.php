@@ -16,7 +16,7 @@ if(isset($_POST['login']))
 
 
     //$result = mysqli_query ( $link, sprintf ("SELECT IDUsuario, NombreUsuario FROM Usuario WHERE EmailUsuario = '%s' AND ClaveUsuario = '%s'", $email,$clave));
-    $result = mysqli_query ( $link, sprintf ("SELECT IDUsuario, NombreUsuario FROM Usuario WHERE EmailUsuario = '%s' AND ClaveUsuario = '%s'", $email,$clave));
+    $result = mysqli_query ( $link, sprintf ("SELECT IDUsuario, NombreUsuario FROM usuario WHERE EmailUsuario = '%s' AND ClaveUsuario = '%s'", $email,$clave));
 
     if (mysqli_num_rows($result) != 0) 
     {
