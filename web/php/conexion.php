@@ -8,6 +8,6 @@
     }
     else
     {
-        printf("conexion exitosa");
+        //printf("conexion exitosa");
     }
 ?>
