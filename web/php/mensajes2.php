@@ -11,7 +11,7 @@
     //date("d-m-Y (H:i:s)", $time);
     //var_dump(date("d-m-Y (H:i:s)", $time));
     
-    $idsala = $_SESSION['IDSala'];
+    $idsala = 1;//$_SESSION['IDSala'];
 
     
     //$result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala WHERE IDSala = '%s'",$idsala));

@@ -7,8 +7,8 @@
     {
         //echo '<script>alert("'.$_POST['msg'].'")</script> ';
         $msg = $_POST['message'];
-        $idsala = $_SESSION['IDSala'];
-        $idusuario = $_SESSION['IDUsuario'];
+        $idsala = 1;//$_SESSION['IDSala'];
+        $idusuario = 1;//$_SESSION['IDUsuario'];
         setlocale(LC_ALL, 'es_ES');
         date_default_timezone_set('America/Tegucigalpa');
         $fecha = date('d/m/Y g:ia');
@@ -31,7 +31,7 @@
 
         if(isset($_POST['datos']))
         {
-            $idsala = $_SESSION['IDSala'];
+            $idsala = 1;//$_SESSION['IDSala'];
             //echo '<script>alert("'.$_POST['msg'].'")</script> ';
             $result = mysqli_query ($link, sprintf ( "SELECT * FROM mensajesxsala INNER JOIN usuario ON mensajesxsala.IDUsuarioEmisor = usuario.IDUsuario WHERE IDSala = '%s' ORDER BY IDMensajesxSala ASC",$idsala));
             $mensajes=array();
