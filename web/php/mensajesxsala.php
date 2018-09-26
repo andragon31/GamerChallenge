@@ -11,7 +11,7 @@
     
     $idsala = $_SESSION["IDSala"];
 
-    $result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala WHERE IDSala = '%s'",$idsala));
+    $result = mysqli_query ($link, sprintf ( "SELECT * FROM mensajesxsala WHERE IDSala = '%s'",$idsala));
     $mensajes=array();
 
     if (mysqli_num_rows($result)!= 0)

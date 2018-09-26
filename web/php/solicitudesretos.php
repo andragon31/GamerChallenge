@@ -10,7 +10,7 @@
         $idsala = $_SESSION['IDSala'];
         $idusuario = $_SESSION['IDUsuario'];
 
-        $result = mysqli_query ($link, sprintf ("SELECT * FROM SolicitudReto INNER JOIN Usuario ON SolicitudReto.IDUsuarioRetado = Usuario.IDUsuario WHERE IDSala = '%s' AND (EstatusSolicitud = 'Pendiente' OR EstatusSolicitud = 'Aceptado')", $idsala));
+        $result = mysqli_query ($link, sprintf ("SELECT * FROM solicitudreto INNER JOIN usuario ON solicitudreto.IDUsuarioRetado = usuario.IDUsuario WHERE IDSala = '%s' AND (EstatusSolicitud = 'Pendiente' OR EstatusSolicitud = 'Aceptado')", $idsala));
         $mensajes=array();
 
         if (mysqli_num_rows($result)!= 0)
@@ -27,7 +27,7 @@
         {
             $idsala = $_SESSION['IDSala'];
             //echo '<script>alert("'.$_POST['msg'].'")</script> ';
-            $result = mysqli_query ($link, sprintf ("SELECT * FROM SolicitudReto INNER JOIN Usuario ON SolicitudReto.IDUsuarioRetado = Usuario.IDUsuario WHERE IDSala = '%s' AND (EstatusSolicitud = 'Pendiente' OR EstatusSolicitud = 'Aceptado')", $idsala));
+            $result = mysqli_query ($link, sprintf ("SELECT * FROM solicitudreto INNER JOIN usuario ON solicitudreto.IDUsuarioRetado = usuario.IDUsuario WHERE IDSala = '%s' AND (EstatusSolicitud = 'Pendiente' OR EstatusSolicitud = 'Aceptado')", $idsala));
             $mensajes=array();
 
             if (mysqli_num_rows($result)!= 0)

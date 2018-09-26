@@ -27,7 +27,7 @@ if(isset($_POST['login']))
         mysqli_free_result ($result);
         mysqli_close ($link);
         
-        echo '<script>alert("ENTRA PARA LOGUEAR")</script> ';
+        //echo '<script>alert("ENTRA PARA LOGUEAR")</script> ';
         echo '<script> window.location = "../principal.php";</script>';
     }
     else
@@ -35,7 +35,7 @@ if(isset($_POST['login']))
         mysqli_free_result ($result);
 		mysqli_close ($link);
         
-        echo '<script>alert("NO ENCUENTRA EL USUARIO")</script> ';
+        //echo '<script>alert("NO ENCUENTRA EL USUARIO")</script> ';
         echo '<script> window.location = "../login.php";</script>';
     }
 }

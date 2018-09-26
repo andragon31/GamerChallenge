@@ -13,10 +13,10 @@
         date_default_timezone_set('America/Tegucigalpa');
         $fecha = date('d/m/Y g:ia');
 
-        $sql ="INSERT INTO MensajesxSala (IDSala, IDUsuarioEmisor, Mensaje, Fecha) VALUES ('$idsala','$idusuario','$msg','$fecha')";
+        $sql ="INSERT INTO mensajesxsala (IDSala, IDUsuarioEmisor, Mensaje, Fecha) VALUES ('$idsala','$idusuario','$msg','$fecha')";
         $result = mysqli_query($link, $sql);
 
-        $result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala INNER JOIN Usuario ON MensajesxSala.IDUsuarioEmisor = Usuario.IDUsuario WHERE IDSala = '%s' ORDER BY IDMensajesxSala ASC",$idsala));
+        $result = mysqli_query ($link, sprintf ( "SELECT * FROM mensajesxsala INNER JOIN usuario ON mensajesxsala.IDUsuarioEmisor = usuario.IDUsuario WHERE IDSala = '%s' ORDER BY IDMensajesxSala ASC",$idsala));
         $mensajes=array();
 
         if (mysqli_num_rows($result)!= 0)
@@ -33,7 +33,7 @@
         {
             $idsala = $_SESSION['IDSala'];
             //echo '<script>alert("'.$_POST['msg'].'")</script> ';
-            $result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala INNER JOIN Usuario ON MensajesxSala.IDUsuarioEmisor = Usuario.IDUsuario WHERE IDSala = '%s' ORDER BY IDMensajesxSala ASC",$idsala));
+            $result = mysqli_query ($link, sprintf ( "SELECT * FROM mensajesxsala INNER JOIN usuario ON mensajesxsala.IDUsuarioEmisor = usuario.IDUsuario WHERE IDSala = '%s' ORDER BY IDMensajesxSala ASC",$idsala));
             $mensajes=array();
 
             if (mysqli_num_rows($result)!= 0)

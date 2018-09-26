@@ -15,7 +15,7 @@
 
     
     //$result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala WHERE IDSala = '%s'",$idsala));
-    $result = mysqli_query ($link, sprintf ( "SELECT * FROM UsuariosxSala INNER JOIN Usuario ON UsuariosxSala.IDUsuario = Usuario.IDUsuario WHERE IDSala = '%s'",$idsala));
+    $result = mysqli_query ($link, sprintf ( "SELECT * FROM usuariosxsala INNER JOIN usuario ON usuariosxsala.IDUsuario = usuario.IDUsuario WHERE IDSala = '%s'",$idsala));
 
     $mensajes=array();
 

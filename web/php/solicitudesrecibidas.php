@@ -8,7 +8,7 @@
     $idusuario = $_SESSION['IDUsuario'];
     
     //$result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala WHERE IDSala = '%s'",$idsala));
-    $result = mysqli_query ($link, sprintf ("SELECT * FROM SolicitudReto INNER JOIN Usuario ON SolicitudReto.IDUsuarioRetador = Usuario.IDUsuario WHERE IDSala = '%s' AND (EstatusSolicitud = 'Pendiente' OR EstatusSolicitud = 'Aceptado')", $idsala));
+    $result = mysqli_query ($link, sprintf ("SELECT * FROM solicitudreto INNER JOIN usuario ON solicitudreto.IDUsuarioRetador = usuario.IDUsuario WHERE IDSala = '%s' AND (EstatusSolicitud = 'Pendiente' OR EstatusSolicitud = 'Aceptado')", $idsala));
 
     $solicitudes=array();
 

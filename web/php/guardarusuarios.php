@@ -7,7 +7,7 @@
         {
             $idsala = 1; //$_SESSION['IDSala'];
             //echo '<script>alert("'.$_POST['msg'].'")</script> ';
-            $result = mysqli_query ($link, sprintf ( "SELECT * FROM UsuariosxSala INNER JOIN Usuario ON UsuariosxSala.IDUsuario = Usuario.IDUsuario WHERE IDSala = '%s' ORDER BY IDUsuariosxSala ASC",$idsala));
+            $result = mysqli_query ($link, sprintf ( "SELECT * FROM usuariosxsala INNER JOIN usuario ON usuariosxsala.IDUsuario = usuario.IDUsuario WHERE IDSala = '%s' ORDER BY IDUsuariosxSala ASC",$idsala));
             $mensajes=array();
 
             if (mysqli_num_rows($result)!= 0)

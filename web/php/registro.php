@@ -16,7 +16,7 @@ if(isset($_POST['registro']))
     //var_dump($email);
     //var_dump($clave);
     
-    $sql ="INSERT INTO Usuario (NombreUsuario, ClaveUsuario, EmailUsuario) VALUES ('$usuario','$clave','$email')";
+    $sql ="INSERT INTO usuario (NombreUsuario, ClaveUsuario, EmailUsuario) VALUES ('$usuario','$clave','$email')";
     $result = mysqli_query($link, $sql);
         
     echo '<script>alert("USUARIO REGISTRADO")</script> ';
