@@ -23,7 +23,7 @@ new Vue({
         },
         enviarmensaje: function(msg) 
         {
-            this.$http.post('https://gamerchallenge.herokuapp.com/php/guardarmensaje2.php',{
+            this.$http.post('php/guardarmensaje2.php',{
                 message: this.msg
             }).then(function(response){
                 this.mensajejson = response.data;
