@@ -4,8 +4,8 @@
     include 'ingresarsala.php';
  
     
-    $idsala = 1;//$_SESSION['IDSala'];
-    $idusuario = 1;//$_SESSION['IDUsuario'];
+    $idsala = $_SESSION['IDSala'];
+    $idusuario = $_SESSION['IDUsuario'];
     
     //$result = mysqli_query ($link, sprintf ( "SELECT * FROM MensajesxSala WHERE IDSala = '%s'",$idsala));
     $result = mysqli_query ($link, sprintf ("SELECT * FROM solicitudreto INNER JOIN usuario ON solicitudreto.IDUsuarioRetado = usuario.IDUsuario WHERE IDSala = '%s' AND (EstatusSolicitud = 'Pendiente' OR EstatusSolicitud = 'Aceptado')", $idsala));
